@@ -1,0 +1,403 @@
+/*
+CSS reset
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*
+From here begins my css rules
+*/
+
+html , body {
+    width:100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*
+header style
+*/
+header {
+    background-color: #e7ebf5;
+    width: 100%;
+}
+
+
+header > div { /* a container inside the header tag to render all the elements.
+                This way i can handle the style of my navigation bar better
+                */
+    padding-bottom: 10px;
+    width: 60%;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.nav {
+    flex-wrap: nowrap;
+}
+
+.nav li {   /*  Style each item of the navigation bar   */
+    padding-top: 15px;
+    display: inline-block;
+}
+
+
+#first_item {   /*  Give paddind in only one item of the list to take the distance 
+                appropriate distance
+                */
+    padding-right: 49vw;
+}
+
+#second_item {
+    margin-right: 5px;
+}
+
+
+
+a { /* Style the links of navigation bar    */
+    color: #212834;
+    text-decoration: none;
+}
+
+a:hover , a:focus  {
+    text-decoration: none;
+    color: #dd603b;
+}
+
+
+/*
+    Main Content of page
+*/
+
+.room_container {
+    width: 100%;
+    height:  auto;
+}
+
+.hotelName {
+    width: 50%;
+    height: 30px;
+    margin: 0 auto 0 auto;
+    background-color: #dd603b;
+    margin-top: 20px;
+    padding-top: 5px;
+    display: flex;
+    align-items: stretch;
+}
+
+.info1 {
+    margin-left: 10px;
+}
+
+.hotelName span {
+    color: white;
+}
+
+#hotelImage {
+    width: 50%;
+    margin: 0 auto 0 auto;
+    margin-top: 20px;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.row {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto 0 auto;
+    background-color: #dd603b;
+    margin-top: 20px;
+    height: auto;
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row span {
+    color: black;
+}
+
+.room_desc {
+    width:50%;
+    margin: 0 auto 0 auto;
+    margin-top: 20px;
+}
+
+.room_desc h1 {
+    font-size: 1.5rem;
+}
+
+.room_desc p {
+    margin-top: 10px;
+    font-size: 90%;
+}
+
+.reservation_button {
+    margin-top: 10px;
+    float: right;
+}
+
+#reservation_button {
+    background-color: red;
+    color: white;
+    border: 0;
+    border-radius: 3px;
+}
+
+.google_map {
+    clear: both;
+    padding-top: 50px;
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+.google_map img {
+    width:500px;
+    height: 300px;
+}
+
+hr {
+    width: 50%;
+}
+
+.reviews {
+    width:100%;
+    margin: 0 auto 0 auto;
+}
+
+.reviews h1 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.reviews p {
+    margin-top: 20px;
+}
+
+.reviews input {
+    margin-top: 20px;
+}
+
+.container {
+    padding: 0;
+    margin: 0;
+}
+
+#review_button {
+    background-color: #dd603b;
+    border: 0;
+    border-radius: 2px;
+    color: white; 
+}
+
+footer {
+    background-color: #e7ebf5;
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+footer > div {
+    width: 80%;
+    height: 50px;
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+div > p {
+    padding-top: 15px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+/************ Media Queries bootstrap ranges  ************/
+
+/* Extra small devices (portrait phones, less than 576px)*/ 
+@media (max-width: 575.98px) { 
+    header > div { /* a container inside the header tag to render all the elements.
+        This way i can handle the style of my navigation bar better
+        */
+        width: 98%;
+    }
+
+    .hotelName {
+        width: 98%;
+        height: 50px;
+    }
+
+    .row {
+        width: 98%;
+    }
+
+    #hotelImage img {
+        width: 98%;
+        object-fit: contain;
+    }
+
+    .room_desc {
+        width: 98%;
+    }
+
+    .google_map {
+        width: 98%;
+    }
+
+    .google_map img {
+        width: 98%;
+        object-fit: contain;
+    }
+
+    .reviews {
+        width: 98%;
+    }
+    
+   
+}
+
+/*Small devices (landscape phones, 576px and up) */ 
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .hotelName {
+        width: 98%;
+    }
+
+    .row {
+        width: 98%;
+    }
+
+    #hotelImage img {
+        width: 98%;
+        object-fit: contain;
+    }
+
+    .room_desc {
+        width: 100%;
+    }
+
+    .google_map {
+        width: 98%;
+    }
+
+    .reviews {
+        width: 98%;
+    }
+}
+
+/*Medium devices (tablets, 768px and up) */ 
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .hotelName {
+        width: 98%;
+    }
+
+    .row {
+        width: 98%;
+    }
+
+    #hotelImage img {
+        width: 98%;
+        object-fit: contain;
+    }
+
+    .room_desc {
+        width: 98%;
+    }
+
+    .google_map {
+        width: 98%;
+    }
+
+    .reviews {
+        width: 98%;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/ 
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .hotelName {
+        width: 98%;
+    }
+
+    .row {
+        width: 98%;
+    }
+
+    #hotelImage img {
+        width: 98%;
+        object-fit: contain;
+    }
+
+    .room_desc {
+        width: 98%;
+    }
+
+    .google_map {
+        width: 98%;
+    }
+
+    .reviews {
+        width: 98%;
+    }
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */ 
+@media (min-width: 1200px) { 
+
+ }
