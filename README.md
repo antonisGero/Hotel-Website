@@ -1,4 +1,4 @@
-# wda-Hotel-Website
+# Hotel-Website
 
 Θέμα:  web εφαρμογή αναζήτησης καταλυμάτων.
 
